@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Cold Email Generator</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Cold Email Generator</h1>
+
+    <label for="senderName">Your Name:</label>
+    <input id="senderName" type="text" placeholder="E.g., John Doe" required />
+
+    <label for="senderEmail">Your Email Address:</label>
+    <input id="senderEmail" type="email" placeholder="E.g., john@example.com" required />
+
+    <label for="receiverEmail">Receiver's Email Address:</label>
+    <input id="receiverEmail" type="email" placeholder="E.g., hiring@company.com" required />
+
+    <label for="emailPurpose">Email Purpose:</label>
+    <input id="emailPurpose" type="text" placeholder="E.g., Job application, meeting request, follow-up" />
+
+    <label for="emailTone">Tone:</label>
+    <select id="emailTone">
+      <option value="professional">Professional</option>
+      <option value="friendly">Friendly</option>
+      <option value="formal">Formal</option>
+      <option value="casual">Casual</option>
+    </select>
+
+    <label for="keyPoints">Key Points / Details (comma separated):</label>
+    <textarea id="keyPoints" rows="4" placeholder="E.g., interested in position, available next week, attach resume"></textarea>
+
+    <button onclick="generateEmail()">Generate Email</button>
+    <button onclick="downloadEmail()">Download Email</button>
+    <!-- <button onclick="sendEmail()">Send Email</button> -->
+    <button onclick="enableEdit()">Edit</button>
+    <button id="saveButton" class="hidden" onclick="saveEditedEmail()">Save</button>
+
+    <div class="output" id="emailOutput" contenteditable="false">Your generated email will appear here...</div>
+  </div>
+
+  <!-- <div class="footer">Powered by Ollama AI (Qwen 2 model) & EmailJS</div> -->
+
+  
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
